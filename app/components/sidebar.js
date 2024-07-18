@@ -6,10 +6,11 @@ import taskIcon from '../icons/task.png';
 import mentorsIcon from '../icons/mentors.png';
 import messageIcon from '../icons/message.png';
 import settingsIcon from '../icons/settings.png';
+import infoBackground from '../images/info-bg.png'; // Arka plan resminizin yolu
 
 const Sidebar = () => {
   return (
-    <div className="h-screen w-64 bg-white text-black border-r-2 border-sidebar-li-hover text text-sm">
+    <div className="h-screen px-3 w-64 bg-white text-black border-r-2 border-sidebar-li-hover flex flex-col justify-between">
       <div className="p-4">
         <div><Image src={logo} alt="Admin Logo" className="mx-auto" /></div>
         <ul className="mt-12 space-y-2">
@@ -35,10 +36,19 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
+      <div className="relative bg-info-bg h-64 rounded-lg m-4 text-white" style={{ backgroundImage: `url(${infoBackground.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="p-4 text-center flex flex-col items-center -mt-10">
+          <div className='rounded-full bg-secondary-500 py-2 px-4 border-4 border-white text-lg shadow-[0px_2px_15px_2px_#54577A]'>?</div>
+        </div>
+        <div className="p-4 rounded-lg text-center flex flex-col">
+          <p className="text-base mb-4">Help Center</p>
+          <p className="text-xs">Having Trouble in Learning. Please contact us for more questions.</p>
+        </div>
+        <div className="p-4 rounded-lg text-center flex flex-col">
+        <button className='bg-white text-secondary-500 w-full rounded-lg py-3 text-xs font-semibold mt-4'>Go to Help Center</button>
+        </div>
+      </div>
     </div>
-    
- 
-    
   );
 };
 

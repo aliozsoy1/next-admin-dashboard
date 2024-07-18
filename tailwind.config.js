@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       colors: {
         "sidebar-li-hover": "#F5F5F7",
+        "info-bg":"#141522",
         primary: {
           900: "#10197A",
           800: "#1A2793",
