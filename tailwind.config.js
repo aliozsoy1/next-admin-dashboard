@@ -103,7 +103,7 @@ module.exports = {
         'bold': 700,
       },
     },
-    darkMode: "class",
+    darkMode: 'class',
   plugins: [nextui()],
   },
   plugins: [],
