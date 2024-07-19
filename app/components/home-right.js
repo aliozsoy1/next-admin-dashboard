@@ -7,7 +7,7 @@ import {today, getLocalTimeZone} from "@internationalized/date";
 const HomeRight = () => {
   
   return (
-    <div className='h-screen px-3 w-1/4 bg-sidebar-li-hover p-5'>
+    <div className='h-screen px-3 w-1/3 bg-sidebar-li-hover p-5'>
       <div className='w-full bg-white rounded-lg'>
         <div className="flex w-full">
         <div className="flex gap-x-4">
