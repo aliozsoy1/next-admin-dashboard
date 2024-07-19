@@ -1,7 +1,7 @@
 import React from 'react';
 import {CircularProgress, Card, CardBody} from "@nextui-org/react";
 import {Badge, Button} from "@nextui-org/react";
-import {NotificationIcon} from "../icons/NotificationIcon";
+import {NotificationIcon} from "../icons/NotificationIcon.js";
 import {Avatar} from "@nextui-org/avatar";
 
 const HomeMain = () => {
