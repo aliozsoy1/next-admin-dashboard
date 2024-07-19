@@ -21,7 +21,7 @@ export default function Home() {
               svg: "w-[75px] h-[75px] drop-shadow-md",
               indicator: "stroke-primary-500",
               track: "stroke-primary-500/10",
-              value: "text-lg text-white absolute top-6 left-1/4",
+              value: "text-lg text-white",
             }}
             value={45}
             strokeWidth={1.5}
