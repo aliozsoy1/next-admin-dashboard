@@ -25,8 +25,8 @@ const HomeMain = () => {
             <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
           </div>
         </div>
-      <div className="flex flex-row">
-        <Card className="w-[196px] h-[214px] border-none bg-secondary-500 rounded-lg">
+      <div className="flex lg:flex-row sm:flex-col">
+        <Card className="lg:w-[196px] md:w-full h-[214px] border-none bg-secondary-500 rounded-lg">
             <CardBody className="justify-left items-left pb-0 text-white p-4">
             <div className="mb-4 text-left w-full text-base">Running Task</div>
             <div className="mb-4 text-3xl w-full text-left font-semibold">65</div>
@@ -48,7 +48,7 @@ const HomeMain = () => {
             </div>
             </CardBody>
         </Card>
-        <div className="flex justify-between ml-10 p-7 bg-sidebar-li-hover rounded-2xl w-full">
+        <div className="flex justify-between lg:ml-10 p-7 bg-sidebar-li-hover rounded-2xl w-full">
             <div className="text-base text-secondary-500 font-semibold">Activity</div>
             <div className="text-sm  text-secondary-500 font-medium">This Week</div>
         </div>
