@@ -74,7 +74,7 @@ const SidebarMobile = ({ isOpen, toggleSidebar }) => {
         <SidebarDesktop />
         <SidebarMobile isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         <div className="flex-1 p-4 md:hidden">
-          <button onClick={toggleSidebar} className=" text-white border-2 border-sidebar-li-hover p-4 rounded-full">
+          <button onClick={toggleSidebar} className=" text-white border-2 border-sidebar-li-hover p-3 rounded-full">
           <Image src={mobileMenuIcon} alt="Settings Icon" width={30} height={30} />
           </button>
         </div>

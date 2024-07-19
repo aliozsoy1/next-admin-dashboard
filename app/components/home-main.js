@@ -14,15 +14,11 @@ const HomeMain = () => {
           </div>
           <div className="hidden md:flex text-secondary-500">
             <Badge content="" shape="circle" className="bg-error-500 p-0 mr-5" placement="top-right">
-              <Button
-                radius="full"
-                isIconOnly
-                className="rounded-full border-2 border-sidebar-li-hover mr-5"
-              >
+              <Button radius="full" isIconOnly className="rounded-full border-2 border-red mr-5" style={{ width: '52px', height: '52px' }}>
                 <NotificationIcon className="fill-current" size={24} />
               </Button>
             </Badge>
-            <Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
+            <Avatar style={{ width: '52px', height: '52px' }} src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
           </div>
         </div>
       <div className="flex lg:flex-row sm:flex-col">
