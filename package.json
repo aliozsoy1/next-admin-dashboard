@@ -33,6 +33,7 @@
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18",
     "shadcn": "^1.0.0",
+    "sharp": "^0.33.4",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },
