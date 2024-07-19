@@ -15,7 +15,7 @@ export default function Home() {
     <meta name="viewport" content="viewport-fit=cover" />
   </Head>
   <MobileHeader/>
-    <div className="flex">
+    <div className="flex flex-col md:flex-row">
       <Sidebar />
       <HomeMain />
       <HomeRight />
