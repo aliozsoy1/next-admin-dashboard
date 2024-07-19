@@ -12,7 +12,7 @@ const HomeMain = () => {
             Hi, Ali Özsoy
           <div className="text-secondary-400 font-medium mt-2 text-base">Lets finish your task today!</div>
           </div>
-          <div className="flex text-secondary-500">
+          <div className="hidden md:flex text-secondary-500">
             <Badge content="" shape="circle" className="bg-error-500 p-0 mr-5" placement="top-right">
               <Button
                 radius="full"

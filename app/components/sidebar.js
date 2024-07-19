@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import logo from '../images/admin-logo.svg';
@@ -6,11 +7,11 @@ import taskIcon from '../icons/task.png';
 import mentorsIcon from '../icons/mentors.png';
 import messageIcon from '../icons/message.png';
 import settingsIcon from '../icons/settings.png';
-import infoBackground from '../images/info-bg.png'; // Arka plan resminizin yolu
+import infoBackground from '../images/info-bg.png';
 
-const Sidebar = () => {
+const SidebarDesktop = () => {
   return (
-    <div className="h-screen px-3 w-64 bg-white text-black border-r-2 border-sidebar-li-hover flex flex-col justify-between">
+    <div className="hidden md:flex h-screen px-3 w-64 bg-white text-black border-r-2 border-sidebar-li-hover flex flex-col justify-between">
       <div className="p-4">
         <div><Image src={logo} alt="Admin Logo" className="mx-auto" /></div>
         <ul className="mt-12 space-y-2">
@@ -45,11 +46,11 @@ const Sidebar = () => {
           <p className="text-xs">Having Trouble in Learning. Please contact us for more questions.</p>
         </div>
         <div className="p-4 rounded-lg text-center flex flex-col">
-        <button className='bg-white text-secondary-500 w-full rounded-lg py-3 text-xs font-semibold mt-4'>Go to Help Center</button>
+          <button className='bg-white text-secondary-500 w-full rounded-lg py-3 text-xs font-semibold mt-4'>Go to Help Center</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Sidebar;
+export default SidebarDesktop;
