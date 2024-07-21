@@ -29,7 +29,7 @@ const HomeMain = () => {
         borderColor: '#141522',
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         fill: false,
-        tension: 0.6,
+        tension: 0.4,
         pointRadius: 0,
         pointHoverRadius: 10,
         pointHoverBackgroundColor: '#fff',
@@ -125,7 +125,7 @@ const HomeMain = () => {
       <div className="flex justify-between mb-10">
         <div className="text-2xl font-semibold text-secondary-500">
           Hi, Ali Özsoy
-          <div className="text-secondary-400 font-medium mt-2 text-base">Let's finish your task today!</div>
+          <div className="text-secondary-400 font-medium mt-2 text-base">Lets finish your task today!</div>
         </div>
         <div className="hidden md:flex text-secondary-500">
           <Badge content="" shape="circle" className="bg-error-500 p-0 mr-5" placement="top-right">
@@ -165,7 +165,7 @@ const HomeMain = () => {
             <div className="text-base text-secondary-500 font-semibold">Activity</div>
             <div className="text-sm text-secondary-500 font-medium">This Week</div>
           </div>
-          <div className="w-full bg-white rounded-2xl  h-[130px]">
+          <div className="w-full bg-white rounded-2xl p-2 h-[130px]">
             <Line data={data} options={options} />
           </div>
         </div>
