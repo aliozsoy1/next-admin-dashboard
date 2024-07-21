@@ -125,7 +125,7 @@ const HomeMain = () => {
       <div className="flex justify-between mb-10">
         <div className="text-2xl font-semibold text-secondary-500">
           Hi, Ali Özsoy
-          <div className="text-secondary-400 font-medium mt-2 text-base">Lets finish your task today!</div>
+          <div className="text-secondary-400 font-medium mt-2 text-base">Let&apos;s finish your task today!</div>
         </div>
         <div className="hidden md:flex text-secondary-500">
           <Badge content="" shape="circle" className="bg-error-500 p-0 mr-5" placement="top-right">
