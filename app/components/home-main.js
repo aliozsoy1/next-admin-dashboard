@@ -1,12 +1,21 @@
 "use client";
 
 import React from "react";
+import Image from 'next/image';
 import { CircularProgress, Card, CardBody } from "@nextui-org/react";
 import { Badge, Button } from "@nextui-org/react";
 import { NotificationIcon } from "../icons/NotificationIcon.js";
 import { Avatar } from "@nextui-org/avatar";
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import { CardHeader } from "@nextui-org/react";
+import taskBoxIcon from '../icons/box-task-icon.png';
+import boxStar from '../icons/box-star.png';
+import '../../app/globals.css'
 
 ChartJS.register(
   CategoryScale,
@@ -19,6 +28,8 @@ ChartJS.register(
 );
 
 const HomeMain = () => {
+
+  const [isFollowed, setIsFollowed] = React.useState(false);
 
   const data = {
     labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
@@ -121,7 +132,7 @@ const HomeMain = () => {
   };
 
   return (
-    <div className="flex-1 p-10">
+    <div className="flex-1 p-10 max-w-[992px]">
       <div className="flex justify-between mb-10">
         <div className="text-2xl font-semibold text-secondary-500">
           Hi, Ali Özsoy
@@ -170,6 +181,162 @@ const HomeMain = () => {
           </div>
         </div>
       </div>
+      <div className="flex mt-10 rounded-2xl">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          //navigation
+          modules={[Navigation]} // Modülleri ekleyin
+          className="mySwiper"
+          breakpoints={{
+            720: {
+              slidesPerView: 2, // 2 slides per view for widths >= 640px
+              spaceBetween: 30
+            }
+          }}
+        >
+          <SwiperSlide className="bg-white p-5 rounded-lg">
+            <Card className="w-full">
+              <CardHeader className="justify-between">
+                <div className="flex gap-3">
+                  <Avatar style={{ width: '48px', height: '48px' }} radius="full" src="https://nextui.org/avatars/avatar-1.png" />
+                  <div className="flex flex-col gap-1 items-start justify-center">
+                    <h4 className="text-base font-semibold leading-none text-secondary-500">Curious George</h4>
+                    <h5 className="text-xs tracking-tight text-secondary-400">UI UX Designer</h5>
+                  </div>
+                </div>
+                <Button
+                  className={isFollowed ? "bg-transparent text-primary-500 border-default-200" : "text-primary-500"}
+                  color="primary"
+                  radius="full"
+                  size="sm"
+                  variant={isFollowed ? "bordered" : "solid"}
+                  onPress={() => setIsFollowed(!isFollowed)}
+                >
+                  {isFollowed ? "- Unfollow" : "+ Follow"}
+                </Button>
+              </CardHeader>
+              <CardBody>
+                <div className="flex justify-between items-center">
+                  <div className="flex gap-2 items-center">
+                    <Image src={taskBoxIcon} alt="Task Icon" width={24} height={24} />
+                    <div className="font-medium text-secondary-500 text-sm">40 Task</div>
+                  </div>
+                  <div className="flex gap-2 items-center">
+                    <Image src={boxStar} alt="Task Icon" width={24} height={24} />
+                    <div className="font-medium text-secondary-500 text-sm">4,7  (750 Reviews)</div>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+          </SwiperSlide>
+          <SwiperSlide className="bg-white p-5 rounded-lg">
+            <Card className="w-full">
+              <CardHeader className="justify-between">
+                <div className="flex gap-3">
+                  <Avatar style={{ width: '48px', height: '48px' }} radius="full" src="https://nextui.org/avatars/avatar-2.png" />
+                  <div className="flex flex-col gap-1 items-start justify-center">
+                    <h4 className="text-base font-semibold leading-none text-secondary-500">Abraham Lincoln</h4>
+                    <h5 className="text-xs tracking-tight text-secondary-400">3D Design</h5>
+                  </div>
+                </div>
+                <Button
+                  className={isFollowed ? "bg-transparent text-primary-500 border-default-200" : "text-primary-500"}
+                  color="primary"
+                  radius="full"
+                  size="sm"
+                  variant={isFollowed ? "bordered" : "solid"}
+                  onPress={() => setIsFollowed(!isFollowed)}
+                >
+                  {isFollowed ? "- Unfollow" : "+ Follow"}
+                </Button>
+              </CardHeader>
+              <CardBody>
+                <div className="flex justify-between items-center">
+                  <div className="flex gap-2 items-center">
+                    <Image src={taskBoxIcon} alt="Task Icon" width={24} height={24} />
+                    <div className="font-medium text-secondary-500 text-sm">32 Task</div>
+                  </div>
+                  <div className="flex gap-2 items-center">
+                    <Image src={boxStar} alt="Task Icon" width={24} height={24} />
+                    <div className="font-medium text-secondary-500 text-sm">4,9  (510 Reviews)</div>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+          </SwiperSlide>
+          <SwiperSlide className="bg-white p-5 rounded-lg">
+            <Card className="w-full">
+              <CardHeader className="justify-between">
+                <div className="flex gap-3">
+                  <Avatar style={{ width: '48px', height: '48px' }} radius="full" src="https://nextui.org/avatars/avatar-3.png" />
+                  <div className="flex flex-col gap-1 items-start justify-center">
+                    <h4 className="text-base font-semibold leading-none text-secondary-500">Alex Stanton</h4>
+                    <h5 className="text-xs tracking-tight text-secondary-400">UI UX Designer</h5>
+                  </div>
+                </div>
+                <Button
+                  className={isFollowed ? "bg-transparent text-primary-500 border-default-200" : "text-primary-500"}
+                  color="primary"
+                  radius="full"
+                  size="sm"
+                  variant={isFollowed ? "bordered" : "solid"}
+                  onPress={() => setIsFollowed(!isFollowed)}
+                >
+                  {isFollowed ? "- Unfollow" : "+ Follow"}
+                </Button>
+              </CardHeader>
+              <CardBody>
+                <div className="flex justify-between items-center">
+                  <div className="flex gap-2 items-center">
+                    <Image src={taskBoxIcon} alt="Task Icon" width={24} height={24} />
+                    <div className="font-medium text-secondary-500 text-sm">40 Task</div>
+                  </div>
+                  <div className="flex gap-2 items-center">
+                    <Image src={boxStar} alt="Task Icon" width={24} height={24} />
+                    <div className="font-medium text-secondary-500 text-sm">4,7  (750 Reviews)</div>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+          </SwiperSlide>
+          <SwiperSlide className="bg-white p-5 rounded-lg">
+            <Card className="w-full">
+              <CardHeader className="justify-between">
+                <div className="flex gap-3">
+                  <Avatar style={{ width: '48px', height: '48px' }} radius="full" src="https://nextui.org/avatars/avatar-4.png" />
+                  <div className="flex flex-col gap-1 items-start justify-center">
+                    <h4 className="text-base font-semibold leading-none text-secondary-500">Curious George</h4>
+                    <h5 className="text-xs tracking-tight text-secondary-400">UI UX Designer</h5>
+                  </div>
+                </div>
+                <Button
+                  className={isFollowed ? "bg-transparent text-primary-500 border-default-200" : "text-primary-500"}
+                  color="primary"
+                  radius="full"
+                  size="sm"
+                  variant={isFollowed ? "bordered" : "solid"}
+                  onPress={() => setIsFollowed(!isFollowed)}
+                >
+                  {isFollowed ? "- Unfollow" : "+ Follow"}
+                </Button>
+              </CardHeader>
+              <CardBody>
+                <div className="flex justify-between items-center">
+                  <div className="flex gap-2 items-center">
+                    <Image src={taskBoxIcon} alt="Task Icon" width={24} height={24} />
+                    <div className="font-medium text-secondary-500 text-sm">40 Task</div>
+                  </div>
+                  <div className="flex gap-2 items-center">
+                    <Image src={boxStar} alt="Task Icon" width={24} height={24} />
+                    <div className="font-medium text-secondary-500 text-sm">4,7  (750 Reviews)</div>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+          </SwiperSlide>
+        </Swiper>
+      </div>  
     </div>
   );
 };
