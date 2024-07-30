@@ -15,6 +15,8 @@ import { Navigation } from 'swiper/modules';
 import { CardHeader } from "@nextui-org/react";
 import taskBoxIcon from '../icons/box-task-icon.png';
 import boxStar from '../icons/box-star.png';
+import leftIcon from '../icons/arrow-left-icon.png';
+import rightIcon from '../icons/arrow-right-icon.png';
 import '../../app/globals.css'
 
 ChartJS.register(
@@ -179,6 +181,13 @@ const HomeMain = () => {
           <div className="w-full bg-white rounded-2xl p-2 h-[130px]">
             <Line data={data} options={options} />
           </div>
+        </div>
+      </div>
+      <div className="flex mt-10 rounded-2xl justify-between">
+        <div className="text-2xl font-semibold text-secondary-500">Monthly Mentors</div>
+        <div className="flex flex-row items-center text-2xl font-semibold text-secondary-500">
+          <Image src={leftIcon} alt="Left" height="auto" className="mr-7"/>
+          <Image src={rightIcon} alt="right" height="auto"/>
         </div>
       </div>
       <div className="flex mt-10 rounded-2xl">
