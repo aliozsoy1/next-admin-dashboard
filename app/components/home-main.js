@@ -200,7 +200,7 @@ const HomeMain = () => {
         </div>
       </div>
       <div className="flex mt-10 rounded-2xl justify-between">
-        <div className="text-2xl font-semibold text-secondary-500">Monthly Mentors</div>
+        <div className="text-2xl font-semibold text-secondary-500">Monthly Mentorss</div>
         <div className="flex flex-row items-center text-2xl font-semibold text-secondary-500">
           <Image onClick={() => swiperRef.current.swiper.slidePrev()} className="cursor-pointer mr-7 rotate-180" src={rightIcon} alt="Left" height="auto"/>
           <Image onClick={() => swiperRef.current.swiper.slideNext()} className="cursor-pointer" src={rightIcon} alt="right" height="auto"/>
