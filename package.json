@@ -1,0 +1,51 @@
+{
+  "name": "next-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "gh-pages -d out"
+  },
+  "dependencies": {
+    "@fontsource/plus-jakarta-sans": "^5.0.20",
+    "@internationalized/date": "^3.5.4",
+    "@nextui-org/badge": "^2.0.30",
+    "@nextui-org/calendar": "^2.0.10",
+    "@nextui-org/date-picker": "^2.1.5",
+    "@nextui-org/progress": "^2.0.32",
+    "@nextui-org/react": "^2.4.5",
+    "@nextui-org/system": "^2.2.4",
+    "@nextui-org/theme": "^2.2.8",
+    "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "chart.js": "^4.4.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.8",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-aria-components": "^1.2.1",
+    "react-calendar": "^5.0.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-dom": "^18",
+    "shadcn": "^1.0.0",
+    "sharp": "^0.33.4",
+    "swiper": "^11.1.5",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6"
+  }
+}
