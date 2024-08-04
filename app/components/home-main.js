@@ -206,7 +206,7 @@ const HomeMain = () => {
           <Image onClick={() => swiperRef.current.swiper.slideNext()} className="cursor-pointer" src={rightIcon} alt="right" height="auto"/>
         </div>
       </div>
-      <div className="flex mt-10 rounded-2xl">
+      <div className="flex mt-5 rounded-2xl">
         <Swiper
           ref={swiperRef}
           slidesPerView={1}
