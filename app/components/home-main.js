@@ -210,7 +210,7 @@ const HomeMain = () => {
                 <div className="flex gap-3">
                   <Avatar style={{ width: '48px', height: '48px' }} radius="full" src="https://nextui.org/avatars/avatar-1.png" />
                   <div className="flex flex-col gap-1 items-start justify-center">
-                    <h4 className="text-base font-semibold leading-none text-secondary-500">Curious George</h4>
+                    <h4 className="text-base font-semibold leading-none text-secondary-500">Curious Georgeee</h4>
                     <h5 className="text-xs tracking-tight text-secondary-400">UI UX Designer</h5>
                   </div>
                 </div>
