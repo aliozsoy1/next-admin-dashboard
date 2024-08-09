@@ -11,7 +11,7 @@ import infoBackground from '../images/info-bg.png';
 
 const SidebarDesktop = () => {
   return (
-    <div className="hidden md:flex h-screen px-3 w-72 bg-white text-black border-r-2 border-sidebar-li-hover flex flex-col justify-between">
+    <div className="hidden md:flex h-screen px-3 w-72 bg-white text-black border-r-2 border-sidebar-li-hover flex flex-col justify-between sticky top-0">
       <div className="p-4">
         <div><Image src={logo} alt="Admin Logo" className="mx-auto" /></div>
         <ul className="mt-12 space-y-2">
