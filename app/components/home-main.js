@@ -15,8 +15,10 @@ import { Navigation } from 'swiper/modules';
 import { CardHeader } from "@nextui-org/react";
 import taskBoxIcon from '../icons/box-task-icon.png';
 import boxStar from '../icons/box-star.png';
-import leftIcon from '../icons/arrow-left-icon.png';
+import taskImage from '../images/task-image-1.png';
+import taskImage2 from '../images/task-image-2.png';
 import rightIcon from '../icons/arrow-right-icon.png';
+import timeIcon from '../icons/time-icon.png';
 import '../../app/globals.css'
 
 ChartJS.register(
@@ -35,6 +37,12 @@ const HomeMain = () => {
     { id: 2, name: "Abraham Lincoln", title: "3D Design", avatar: "https://nextui.org/avatars/avatar-2.png", tasks: 32, rating: 4.9, reviews: 510 },
     { id: 3, name: "Alex Santon", title: "UI UX Designer", avatar: "https://nextui.org/avatars/avatar-3.png", tasks: 40, rating: 4.7, reviews: 750 },
     { id: 4, name: "Julia Philips", title: "IOS Developer", avatar: "https://nextui.org/avatars/avatar-4.png", tasks: 25, rating: 4.8, reviews: 250 },
+  ];
+  const upcomingTasks = [
+    { id: 1, name: "Creating Mobile App Design", title: "UI UX Design", image: taskImage, tasksTime: 3, progress:75},
+    { id: 2, name: "Creating Perfect Website", title: "Web Developer", image: taskImage2, tasksTime: 4, progress:85},
+    { id: 3, name: "Creating Mobile App Design", title: "UI UX Design", image: taskImage, tasksTime: 3, progress:75},
+    { id: 4, name: "Creating Perfect Website", title: "Web Developer", image: taskImage2, tasksTime: 4, progress:85},
   ];
   const [followStates, setFollowStates] = useState(users.map(user => ({ id: user.id, isFollowed: false })));
   const swiperRef = useRef(null);
@@ -252,6 +260,71 @@ const HomeMain = () => {
                     <div className="flex gap-2 items-center">
                       <Image src={boxStar} alt="Task Icon" width={24} height={24} />
                       <div className="font-medium text-secondary-500 text-sm">{user.rating} ({user.reviews} Reviews)</div>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className="flex mt-10 rounded-2xl justify-between">
+        <div className="text-2xl font-semibold text-secondary-500">Upcoming Tasks</div>
+        <div className="flex flex-row items-center text-2xl font-semibold text-secondary-500">
+          <Image onClick={() => swiperRef.current.swiper.slidePrev()} className="cursor-pointer mr-7 rotate-180" src={rightIcon} alt="Left" height="auto"/>
+          <Image onClick={() => swiperRef.current.swiper.slideNext()} className="cursor-pointer" src={rightIcon} alt="right" height="auto"/>
+        </div>
+      </div>
+      <div className="flex mt-5 rounded-2xl">
+        <Swiper
+          ref={swiperRef}
+          slidesPerView={1}
+          spaceBetween={30}
+          navigationHide
+          modules={[Navigation]}
+          className="mySwiper"
+          breakpoints={{
+            720: {
+              slidesPerView: 2,
+              spaceBetween: 30
+            }
+          }}
+        >
+          {upcomingTasks.map(tasks => (
+            <SwiperSlide key={tasks.id} className="bg-white p-5 rounded-lg">
+              <Card className="w-full">
+                <CardHeader className="justify-between">
+                  <div className="flex flex-col gap-3">
+                    <Image src={tasks.image} alt="Task Icon" className='rounded-xl'/>
+                    <div className="flex flex-col gap-1 items-start justify-center">
+                      <h4 className="text-base font-semibold leading-none text-secondary-500">{tasks.name}</h4>
+                      <h5 className="text-xs tracking-tight text-secondary-400">{tasks.title}</h5>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardBody>
+                  <div className='mb-5'>
+                    <div className="flex justify-between mb-3">
+                      <span className="text-base font-medium text-secondary-500 dark:text-white">Progress</span>
+                      <span className="text-base font-medium text-primary-500 dark:text-white">{tasks.progress}%</span>
+                    </div>
+                    <div className="w-full bg-primary-200 rounded-full h-2.5 dark:bg-gray-700">
+                      <div className="bg-primary-500 h-2.5 rounded-full" style={{ width: `${tasks.progress}%` }}></div>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div className="flex gap-2 items-center">
+                      <Image src={timeIcon} alt="Task Icon" width={24} height={24} />
+                      <div className="font-medium text-secondary-500 text-base">{tasks.tasksTime} Days Left</div>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                      <div className="flex flex-row font-medium text-secondary-500 text-sm">
+                        <Avatar style={{ width: '24px', height: '24px' }} className="border-2" radius="full" src="https://nextui.org/avatars/avatar-1.png" />
+                        <Avatar style={{ width: '24px', height: '24px' }} className='ml-[-7px] border-2' radius="full" src="https://nextui.org/avatars/avatar-2.png" />
+                        <Avatar style={{ width: '24px', height: '24px' }} className='ml-[-7px] border-2' radius="full" src="https://nextui.org/avatars/avatar-3.png" />
+                        <Avatar style={{ width: '24px', height: '24px' }} className='ml-[-7px] border-2' radius="full" src="https://nextui.org/avatars/avatar-4.png" />
+                        <Avatar style={{ width: '24px', height: '24px' }} className='ml-[-7px] border-2' radius="full" src="https://nextui.org/avatars/avatar-5.png" />
+                      </div>
                     </div>
                   </div>
                 </CardBody>
