@@ -45,7 +45,8 @@ const HomeMain = () => {
     { id: 4, name: "Creating Perfect Website", title: "Web Developer", image: taskImage2, tasksTime: 4, progress:85},
   ];
   const [followStates, setFollowStates] = useState(users.map(user => ({ id: user.id, isFollowed: false })));
-  const swiperRef = useRef(null);
+  const swiperMontly = useRef(null);
+  const swiperUpcoming = useRef(null);
 
   const toggleFollow = (userId) => {
     setFollowStates(prevStates => 
@@ -210,13 +211,13 @@ const HomeMain = () => {
       <div className="flex mt-10 rounded-2xl justify-between">
         <div className="text-2xl font-semibold text-secondary-500">Monthly Mentors</div>
         <div className="flex flex-row items-center text-2xl font-semibold text-secondary-500">
-          <Image onClick={() => swiperRef.current.swiper.slidePrev()} className="cursor-pointer mr-7 rotate-180" src={rightIcon} alt="Left" height="auto"/>
-          <Image onClick={() => swiperRef.current.swiper.slideNext()} className="cursor-pointer" src={rightIcon} alt="right" height="auto"/>
+          <Image onClick={() => swiperMontly.current.swiper.slidePrev()} className="cursor-pointer mr-7 rotate-180" src={rightIcon} alt="Left" height="auto"/>
+          <Image onClick={() => swiperMontly.current.swiper.slideNext()} className="cursor-pointer" src={rightIcon} alt="right" height="auto"/>
         </div>
       </div>
       <div className="flex mt-5 rounded-2xl">
         <Swiper
-          ref={swiperRef}
+          ref={swiperMontly}
           slidesPerView={1}
           spaceBetween={30}
           navigationHide
@@ -271,13 +272,13 @@ const HomeMain = () => {
       <div className="flex mt-10 rounded-2xl justify-between">
         <div className="text-2xl font-semibold text-secondary-500">Upcoming Tasks</div>
         <div className="flex flex-row items-center text-2xl font-semibold text-secondary-500">
-          <Image onClick={() => swiperRef.current.swiper.slidePrev()} className="cursor-pointer mr-7 rotate-180" src={rightIcon} alt="Left" height="auto"/>
-          <Image onClick={() => swiperRef.current.swiper.slideNext()} className="cursor-pointer" src={rightIcon} alt="right" height="auto"/>
+          <Image onClick={() => swiperUpcoming.current.swiper.slidePrev()} className="cursor-pointer mr-7 rotate-180" src={rightIcon} alt="Left" height="auto"/>
+          <Image onClick={() => swiperUpcoming.current.swiper.slideNext()} className="cursor-pointer" src={rightIcon} alt="right" height="auto"/>
         </div>
       </div>
       <div className="flex mt-5 rounded-2xl">
         <Swiper
-          ref={swiperRef}
+          ref={swiperUpcoming}
           slidesPerView={1}
           spaceBetween={30}
           navigationHide
