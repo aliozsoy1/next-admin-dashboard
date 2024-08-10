@@ -135,13 +135,12 @@ const HomeRight = () => {
         </div>
       </div>
       {upcomingTasks.map(tasks => (
-      <div className='w-full bg-white rounded-lg p-5 mt-10'>
+      <div key={tasks.id} className='w-full bg-white rounded-lg p-5 mt-10'>
         <div className='flex flex-row justify-between'>
           <div className='text-secondary-500 font-bold'>Task Today</div>
           <div>•••</div>
         </div>
         <div>
-        
           <Card className="w-full">
             <CardHeader className="justify-between p-0 mt-5">
               <div className="flex flex-col gap-3">
