@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
-import { CircularProgress, Card, CardBody } from "@nextui-org/react";
+import { CircularProgress, Card, CardBody, CardHeader } from "@nextui-org/react";
 import { Badge, Button } from "@nextui-org/react";
 import { NotificationIcon } from "../icons/NotificationIcon.js";
 import { Avatar } from "@nextui-org/avatar";
@@ -12,7 +12,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import { CardHeader } from "@nextui-org/react";
 import taskBoxIcon from '../icons/box-task-icon.png';
 import boxStar from '../icons/box-star.png';
 import taskImage from '../images/task-image-1.png';
