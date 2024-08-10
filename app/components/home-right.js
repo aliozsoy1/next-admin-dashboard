@@ -22,7 +22,7 @@ const HomeRight = () => {
   };
 
   const getCenteredWeekDates = (date) => {
-    const centerIndex = 3; // Bugünün haftanın ortasında olması için
+    const centerIndex = 3;
     const startOfWeek = new Date(date);
     startOfWeek.setDate(startOfWeek.getDate() - centerIndex);
 
