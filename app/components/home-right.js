@@ -75,7 +75,7 @@ const HomeRight = () => {
   };
 
   return (
-    <div className='flex md:flex-col px-10 md:w-1/3 bg-sidebar-li-hover p-5'>
+    <div className='flex flex-col md:flex-col px-10 md:w-1/3 bg-sidebar-li-hover p-5'>
       <div className='w-full bg-white rounded-lg p-5'>
         <div className='flex justify-between items-center mb-3'>
           <Image
