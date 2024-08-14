@@ -80,7 +80,8 @@ export default function LoginPage() {
         <div className="hidden md:flex md:w-1/2 bg-primary-200 p-12 rounded-l-[60px] rounded-r-2xl items-center shadow-md ml-8 justify-center">
           <div className="text-center">
             <h2 className="text-3xl font-semibold text-gray-800 mb-4">Hoşgeldiniz!</h2>
-            <p className="text-gray-600">Panele giriş yapmak için;<br></br>
+            <p className="text-gray-600">Giriş için henüz APİ mevcut değildir. Giriş bilgileri değişkenler ile sağlanmaktadır. <br></br><br></br>
+            Panele giriş yapmak için;<br></br>
                 <strong>E-Posta:</strong> admin@example.com<br></br>
                 <strong>Şifre:</strong> password
             </p>
