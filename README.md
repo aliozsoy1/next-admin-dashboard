@@ -2,10 +2,9 @@
 
 ## Kullanılan Teknolojiler
 
-- Next.js 14
+- Next.js
 - Tailwind CSS
 - Auth0 Authentication
-- NextAuth.js
 - React Icons
 - Chart.js
 - Swiper
