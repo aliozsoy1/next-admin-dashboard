@@ -2,7 +2,7 @@
 
 ## Demo Linki
 
-[Live Demo Link](https://your-vercel-deployment-url.vercel.app)
+[Live Demo Link](https://next-admin-dashboard-sand.vercel.app/)
 
 ## Kullanılan Teknolojiler
 
