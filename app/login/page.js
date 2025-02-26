@@ -113,7 +113,7 @@ export default function LoginPage() {
           <div className="text-center">
             <h2 className="text-3xl font-semibold text-gray-800 mb-4">Hoşgeldiniz!</h2>
             <p className="text-gray-600"> <br></br>
-            Authentication işlemi Auth0 ile yapılmaktadır. <br></br>Panele giriş yapmak için;<br></br>
+            Authentication işlemi Auth0 ile yapılmaktadır.. <br></br>Panele giriş yapmak için;<br></br>
                 <strong>E-Posta:</strong> admin@example.com<br></br>
                 <strong>Şifre:</strong> PasswordAdmin@
             </p>
