@@ -12,6 +12,10 @@ import mobileMenuIcon from '../icons/mobile-menu.svg';
 import SidebarDesktop from './sidebar';
 
 const SidebarMobile = ({ isOpen, toggleSidebar }) => {
+
+  const handleSignOut = async () => {
+    await signOut({ callbackUrl: '/login' });
+  };
     return (
       <div className={`fixed z-50 inset-0 bg-white text-black border-r-2 border-sidebar-li-hover flex flex-col justify-between transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 md:hidden`}>
         <div className="p-4">
@@ -44,6 +48,15 @@ const SidebarMobile = ({ isOpen, toggleSidebar }) => {
               <Image src={settingsIcon} alt="Settings Icon" width={20} height={20} />
               <span className="ml-2 text-secondary-300">Settings</span>
             </li>
+            <li className="flex items-center py-3 px-4 hover:bg-sidebar-li-hover cursor-pointer rounded-lg">
+            <button
+              onClick={handleSignOut}
+              className="flex items-center w-full text-left"
+            >
+              <FiLogOut className="w-5 h-5 text-secondary-300" />
+              <span className="ml-2 text-secondary-300">Logout</span>
+            </button>
+          </li>
           </ul>
         </div>
         <div className="relative bg-info-bg h-64 rounded-lg m-4 text-white" style={{ backgroundImage: `url(${infoBackground.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
