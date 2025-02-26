@@ -109,7 +109,7 @@ export default function LoginPage() {
           </div>
         </div>
         {/* Hoşgeldiniz Bölgesi */}
-        <div className="hidden md:flex md:w-1/2 bg-primary-200 p-12 rounded-l-[60px] rounded-r-2xl items-center shadow-md ml-8 justify-center">
+        <div className="flex w-full md:w-1/2 bg-primary-200 p-12 md:rounded-l-[60px] rounded-[0px] md:rounded-r-2xl items-center shadow-md md:ml-8 justify-center">
           <div className="text-center">
             <h2 className="text-3xl font-semibold text-gray-800 mb-4">Hoşgeldiniz!</h2>
             <p className="text-gray-600"> <br></br>
