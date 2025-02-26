@@ -1,7 +1,5 @@
 # Next.js Admin Dashboard with Auth0
 
-![Dashboard Screenshot](./public/screenshots/dashboard.png)
-
 ## Kullanılan Teknolojiler
 
 - Next.js 14
@@ -9,7 +7,6 @@
 - Auth0 Authentication
 - NextAuth.js
 - React Icons
-- Plus Jakarta Sans Font
 - Chart.js
 - Swiper
 - NextUI Components
@@ -27,19 +24,11 @@
 
 [Live Demo Link](https://your-vercel-deployment-url.vercel.app)
 
-## Ekran Görüntüleri
-
-### Login Sayfası
-![Login Page](./public/screenshots/login.png)
-
-### Dashboard
-![Dashboard](./public/screenshots/dashboard.png)
-
 ## Kurulum
 
 1. Projeyi klonlayın
 ```bash
-git clone https://github.com/your-username/next-admin.git
+git clone [https://github.com/your-username/next-admin.git](https://github.com/aliozsoy1/next-admin-dashboard.git)
 ```
 
 2. Proje dizinine gidin
@@ -97,4 +86,4 @@ MIT
 
 ## İletişim
 
-Ali Özsoy - [GitHub](https://github.com/aliozsoy1) - [LinkedIn](https://www.linkedin.com/in/your-linkedin)
+Ali Özsoy - [GitHub](https://github.com/aliozsoy1) - [LinkedIn](https://www.linkedin.com/in/ali-%C3%B6zsoy-33870986/)
