@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Admin Dashboard with Auth0
 
-## Getting Started
+![Dashboard Screenshot](./public/screenshots/dashboard.png)
 
-First, run the development server:
+## Kullanılan Teknolojiler
 
+- Next.js 14
+- Tailwind CSS
+- Auth0 Authentication
+- NextAuth.js
+- React Icons
+- Plus Jakarta Sans Font
+- Chart.js
+- Swiper
+- NextUI Components
+
+## Ana Özellikler
+
+- 🔐 Auth0 ile güvenli kullanıcı girişi
+- 📱 Responsive tasarım (Mobil ve Desktop uyumlu)
+- 📊 Dashboard üzerinde grafikler ve istatistikler
+- 🎨 Modern ve kullanıcı dostu arayüz
+- 🔄 Gerçek zamanlı veri görselleştirme
+- 📱 Mobil uyumlu sidebar ve header
+
+## Demo
+
+[Live Demo Link](https://your-vercel-deployment-url.vercel.app)
+
+## Ekran Görüntüleri
+
+### Login Sayfası
+![Login Page](./public/screenshots/login.png)
+
+### Dashboard
+![Dashboard](./public/screenshots/dashboard.png)
+
+## Kurulum
+
+1. Projeyi klonlayın
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/next-admin.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Proje dizinine gidin
+```bash
+cd next-admin
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Gerekli paketleri yükleyin
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. `.env.example` dosyasını `.env` olarak kopyalayın ve Auth0 bilgilerinizi ekleyin
+```env
+AUTH0_CLIENT_ID=your_client_id
+AUTH0_CLIENT_SECRET=your_client_secret
+AUTH0_ISSUER=your-domain.us.auth0.com
+NEXTAUTH_SECRET=your_random_string
+NEXTAUTH_URL=http://localhost:3000
+```
 
-## Learn More
+5. Geliştirme sunucusunu başlatın
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+6. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açın
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Auth0 Yapılandırması
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. [Auth0 Dashboard](https://manage.auth0.com/) üzerinde yeni bir uygulama oluşturun
+2. Application Settings'de aşağıdaki URL'leri ekleyin:
+   - Allowed Callback URLs: `http://localhost:3000/api/auth/callback/auth0`
+   - Allowed Logout URLs: `http://localhost:3000`
+   - Allowed Web Origins: `http://localhost:3000`
+3. Username-Password Authentication'ı aktif edin
+4. Test kullanıcısı oluşturun veya var olan kullanıcılarla giriş yapın
 
-## Deploy on Vercel
+## Örnek Kullanıcı
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+Email: admin@example.com
+Password: PasswordAdmin@
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployment
+
+Bu proje Vercel'e deploy edilebilir. Vercel'de deployment yaparken environment variables'ları eklemeyi unutmayın.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/next-admin)
+
+## Lisans
+
+MIT
+
+## İletişim
+
+Ali Özsoy - [GitHub](https://github.com/aliozsoy1) - [LinkedIn](https://www.linkedin.com/in/your-linkedin)
