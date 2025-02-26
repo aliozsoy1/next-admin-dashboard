@@ -27,7 +27,7 @@
 
 1. Projeyi klonlayın
 ```bash
-git clone [https://github.com/your-username/next-admin.git](https://github.com/aliozsoy1/next-admin-dashboard.git)
+git clone [https://github.com/aliozsoy1/next-admin-dashboard.git]
 ```
 
 2. Proje dizinine gidin
