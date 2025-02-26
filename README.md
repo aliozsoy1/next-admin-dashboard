@@ -79,10 +79,6 @@ Bu proje Vercel'e deploy edilebilir. Vercel'de deployment yaparken environment v
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/next-admin)
 
-## Lisans
-
-MIT
-
 ## İletişim
 
 Ali Özsoy - [GitHub](https://github.com/aliozsoy1) - [LinkedIn](https://www.linkedin.com/in/ali-%C3%B6zsoy-33870986/)
