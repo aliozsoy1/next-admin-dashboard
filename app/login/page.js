@@ -1,26 +1,57 @@
 'use client'; // Bu satır, bileşenin client-side çalışacağını belirtir
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { FaGoogle, FaFacebook, FaGithub } from 'react-icons/fa'; // İkonları içe aktar
+import { signIn, useSession } from 'next-auth/react';
+import '../globals.css';
+import "@fontsource/plus-jakarta-sans";
 
 export default function LoginPage() {
   const router = useRouter(); // Yönlendirme için useRouter hook'unu kullanıyoruz
+  const { data: session, status } = useSession();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    // Basit kontrol: Eğer email ve password doluysa, login başarılı sayılır
-    if (email === 'admin@example.com' && password === 'password') {
-      // Giriş başarılıysa dashboard'a yönlendir
+  // Eğer oturum açıksa, kullanıcıyı dashboard'a yönlendir
+  useEffect(() => {
+    if (session) {
       router.push('/dashboard');
-    } else {
-      // Hata mesajı göster
-      setError('Hatalı email veya şifre');
     }
+  }, [session, router]);
+
+  // Sayfa yüklenirken oturum kontrolü yapılıyorsa loading göster
+
+  // Oturum açıksa sayfayı render etme
+  if (session) {
+    return null;
+  }
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setError('');
+
+    try {
+      const result = await signIn('credentials', {
+        email,
+        password,
+        redirect: false,
+      });
+
+      if (result?.error) {
+        setError('Giriş başarısız. Lütfen bilgilerinizi kontrol edin.');
+      } else {
+        router.push('/dashboard');
+      }
+    } catch (error) {
+      setError('Bir hata oluştu. Lütfen tekrar deneyin.');
+    }
+  };
+
+  // Sosyal medya girişleri için
+  const handleSocialLogin = (provider) => {
+    signIn(provider, { callbackUrl: '/dashboard' });
   };
 
   return (
@@ -64,7 +95,8 @@ export default function LoginPage() {
               <button className="flex items-center justify-center p-3 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-100">
                 <FaGoogle className="w-4 h-4 text-gray-700" />
               </button>
-              <button className="flex items-center justify-center p-3 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-100">
+              <button 
+                className="flex items-center justify-center p-3 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-100">
                 <FaFacebook className="w-4 h-4 text-gray-700" />
               </button>
               <button className="flex items-center justify-center p-3 border border-gray-300 rounded-md shadow-sm bg-white hover:bg-gray-100">
@@ -80,10 +112,10 @@ export default function LoginPage() {
         <div className="hidden md:flex md:w-1/2 bg-primary-200 p-12 rounded-l-[60px] rounded-r-2xl items-center shadow-md ml-8 justify-center">
           <div className="text-center">
             <h2 className="text-3xl font-semibold text-gray-800 mb-4">Hoşgeldiniz!</h2>
-            <p className="text-gray-600">Giriş için henüz APİ mevcut değildir. Giriş bilgileri değişkenler ile sağlanmaktadır. <br></br><br></br>
-            Panele giriş yapmak için;<br></br>
+            <p className="text-gray-600"> <br></br>
+            Authentication işlemi Auth0 ile yapılmaktadır. <br></br>Panele giriş yapmak için;<br></br>
                 <strong>E-Posta:</strong> admin@example.com<br></br>
-                <strong>Şifre:</strong> password
+                <strong>Şifre:</strong> PasswordAdmin@
             </p>
           </div>
         </div>

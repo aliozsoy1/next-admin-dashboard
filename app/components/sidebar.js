@@ -8,8 +8,18 @@ import mentorsIcon from '../icons/mentors.png';
 import messageIcon from '../icons/message.png';
 import settingsIcon from '../icons/settings.png';
 import infoBackground from '../images/info-bg.png';
+import { signOut } from 'next-auth/react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { FiLogOut } from 'react-icons/fi';
 
 const SidebarDesktop = () => {
+  const pathname = usePathname();
+
+  const handleSignOut = async () => {
+    await signOut({ callbackUrl: '/login' });
+  };
+
   return (
     <div className="hidden md:flex h-screen px-3 w-72 bg-white text-black border-r-2 border-sidebar-li-hover flex flex-col justify-between sticky top-0">
       <div className="p-4">
@@ -32,8 +42,17 @@ const SidebarDesktop = () => {
             <span className="ml-2 text-secondary-300">Message</span>
           </li>
           <li className="flex items-center py-3 px-4 hover:bg-sidebar-li-hover cursor-pointer rounded-lg">
-            <Image src={settingsIcon} alt="Settings Icon" width={20} height={20} />
-            <span className="ml-2 text-secondary-300">Settings</span>
+            <Image src={settingsIcon} alt="Message Icon" width={20} height={20} />
+              <span className="ml-2 text-secondary-300">Settings</span>
+          </li>
+          <li className="flex items-center py-3 px-4 hover:bg-sidebar-li-hover cursor-pointer rounded-lg">
+            <button
+              onClick={handleSignOut}
+              className="flex items-center w-full text-left"
+            >
+              <FiLogOut className="w-5 h-5 text-secondary-300" />
+              <span className="ml-2 text-secondary-300">Logout</span>
+            </button>
           </li>
         </ul>
       </div>
