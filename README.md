@@ -1,5 +1,9 @@
 # Next.js Admin Dashboard with Auth0
 
+## Demo Linki
+
+[Live Demo Link](https://your-vercel-deployment-url.vercel.app)
+
 ## Kullanılan Teknolojiler
 
 - Next.js
@@ -18,10 +22,6 @@
 - 🎨 Modern ve kullanıcı dostu arayüz
 - 🔄 Gerçek zamanlı veri görselleştirme
 - 📱 Mobil uyumlu sidebar ve header
-
-## Demo
-
-[Live Demo Link](https://your-vercel-deployment-url.vercel.app)
 
 ## Kurulum
 
