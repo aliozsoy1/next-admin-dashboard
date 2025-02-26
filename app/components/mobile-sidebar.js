@@ -10,6 +10,8 @@ import settingsIcon from '../icons/settings.png';
 import infoBackground from '../images/info-bg.png';
 import mobileMenuIcon from '../icons/mobile-menu.svg';
 import SidebarDesktop from './sidebar';
+import { signOut } from 'next-auth/react';
+import { FiLogOut } from 'react-icons/fi';
 
 const SidebarMobile = ({ isOpen, toggleSidebar }) => {
 

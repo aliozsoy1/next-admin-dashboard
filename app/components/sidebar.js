@@ -9,7 +9,6 @@ import messageIcon from '../icons/message.png';
 import settingsIcon from '../icons/settings.png';
 import infoBackground from '../images/info-bg.png';
 import { signOut } from 'next-auth/react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FiLogOut } from 'react-icons/fi';
 
